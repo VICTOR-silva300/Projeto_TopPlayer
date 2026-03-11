@@ -1,6 +1,8 @@
 import express from "express";
 import cors from "cors";
-import usuarioRoutes from "./routes/usuarioRoutes.js"
+import usuariosRoutes from "./routes/usuariosRoutes.js"
+import jogosRoutes from "./routes/jogosRoutes.js"
+import playersRoutes from "./routes/playersRoutes.js"
 
 const app = express();
 app.use(express.json());
@@ -10,5 +12,8 @@ app.get("/", (req, res)=>{
     res.json({msg: "Hello world"})
 })
 
-app.use("/usuarios", usuarioRoutes)
-export default app
+app.use("/usuarios", usuariosRoutes)
+app.use("/jogos", jogosRoutes)
+app.use("/players", playersRoutes)
+
+export default app;

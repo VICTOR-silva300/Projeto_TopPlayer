@@ -1,4 +1,4 @@
-import * as usuarioModel from "../models/usuarioModel.js"
+import * as usuarioModel from "../models/usuariosModel.js"
 import crypto from "crypto";
 
 export async function listar(req, res) {
@@ -36,6 +36,24 @@ export async function criar(req, res) {
         msg: "Usuário criado com sucesso",
         id
     })
+}
+
+export async function deletar(req, res) {
+    const { id } = req.params;
+
+    const usuario = await usuarioModel.buscarPorId(id);
+
+    if (!usuario) {
+        return res.status(404).json({
+            msg: "Usuário não encontrado"
+        });
+    }
+
+    await usuarioModel.deletarUsuario(id);
+
+    res.json({
+        msg: "Usuário deletado com sucesso"
+    });
 }
 
 export async function login(req, res) {
