@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { Router } from "express"
 import * as partidasController from '../controllers/partidasController.js';
 
 const router = Router();

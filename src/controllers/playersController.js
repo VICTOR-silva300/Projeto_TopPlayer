@@ -1,4 +1,4 @@
-import * as playersModel from "../models/playersModel.js";
+import * as playersModel from "../models/playersModel.js"
 
 export const listar = async (req, res) => {
   const players = await playersModel.listarPlayers();

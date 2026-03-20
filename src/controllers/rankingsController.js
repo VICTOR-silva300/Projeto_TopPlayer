@@ -1,4 +1,4 @@
-import rankingsModel from '../models/rankingsModel.js';
+import rankingsModel from '../models/rankingsModel.js'
  
 class rankingsController {
  

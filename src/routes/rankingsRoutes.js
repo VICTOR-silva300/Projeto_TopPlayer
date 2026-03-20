@@ -1,4 +1,4 @@
-import { Router } from 'express';
+import { Router } from 'express'
 import rankingsController from '../controllers/rankingsController.js';
  
 const router = Router();

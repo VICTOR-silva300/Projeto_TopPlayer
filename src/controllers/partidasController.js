@@ -1,4 +1,4 @@
-import * as partidasModel from '../models/partidasModel.js';
+import * as partidasModel from '../models/partidasModel.js'
 
 export const listar = async (req, res) => {
   const partidas = await partidasModel.listarPartidas();
